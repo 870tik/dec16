@@ -1,13 +1,10 @@
 #contentList {
     width: 80%;
-    margin-top: calc(80px + 10%);
     margin: calc(80px + 10%) auto 80px;
 }
 
 #bookImg {
-    width: 100%;
-    height: 100%;
+    width: 20%;
     margin: 2% 0;
     object-fit: cover;
-    object-position: center;
 }

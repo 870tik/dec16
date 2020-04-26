@@ -17,7 +17,7 @@ window.onload = function () {
     setInterval(slideshow_timer, 5000);
     setTimeout(removeSplashscreen, 1700);
     setTimeout(removeClass, 3000);
-    setTimeout(addNavAnimation, 2800);
+    setTimeout(addNavAnimation, 2300);
     var data = reiwa_2_ss;
     for (var i = 0; i < data.length; i++) {
         view(data[i]);

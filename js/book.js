@@ -8,19 +8,20 @@ var pos = 0;
 var menuIcon = document.getElementById("menuIcon");
 var menuSp = document.getElementById("menuSp");
 
+var photoNum;
+var bookId;
 
 var contentList = document.getElementById("contentList");
+var contentImg = document.getElementById("contentImg");
 var data = lookbook;
 
 window.onload = function () {
     splashScreen.style.display = "none";
     removeClass();
     addNavAnimation();
-    var bookId = GetBookId();
-    var photoNum = GetPhotoNumber();
-    for (var i = 0; i < photoNum; i++) {
-        view(bookId, i + 1);
-    }
+    bookId = GetBookId();
+    photoNum = GetPhotoNumber();
+    view(bookId);
 }
 
 function addNavAnimation() {
@@ -58,14 +59,22 @@ function GetBookId() {
   }
 
 function GetPhotoNumber() {
-if (1 < window.location.hash.length) {
-    // 最初の1文字 (?記号) を除いた文字列を取得する
-    var parameter = document.location.hash.slice(1);
-    return parameter;
-}
-return null;
+  if (1 < window.location.hash.length) {
+      // 最初の1文字 (?記号) を除いた文字列を取得する
+      var parameter = document.location.hash.slice(1);
+      return parameter;
+  }
+  return null;
 }
 
 function view(data, i) {
-    contentList.insertAdjacentHTML('beforeend','<img id="bookImg" src=../data/lookbook/' + data + '/lookbook' + [i] + '.jpg />');
+  for (var i = 0; i < photoNum; i++) {
+    var imgNum = i + 1;
+    contentList.insertAdjacentHTML('beforeend','<img id="bookImg" src=../data/lookbook/' + data + '/lookbook' + imgNum + '.jpg onclick=changeImg("' + data + '","' + imgNum + '") />');
+  }
+  contentImg.insertAdjacentHTML('beforeend','<img id="content" src=../data/lookbook/' + data + '/lookbook1.jpg />');
 }
+
+function changeImg(data, i){
+    document.getElementById("content").src = "../data/lookbook/" + data + "/lookbook" + i + ".jpg";
+};

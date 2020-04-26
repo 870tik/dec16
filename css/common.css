@@ -57,7 +57,7 @@ nav {
 }
 
 .navAnimation {
-    animation: scaleY 0.5s ease-in-out forwards;
+    animation: slideIn 0.3s ease-in-out forwards;
 }
 
 .navInner {
@@ -281,11 +281,11 @@ footer {
     }
   }
 
-  @keyframes scaleY {
+  @keyframes slideIn {
     0% {
-        transform: scaleY(0);
+        transform: translateY(-92px);
     }
     100% {
-        transform: scaleY(1);
+        transform: translateY(0px);
     }
   }
