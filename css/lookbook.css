@@ -1,0 +1,44 @@
+#contentList {
+    width: 100%;
+    margin-top: calc(80px + 10%);
+    margin: calc(80px + 10%) auto 80px;
+    display: grid;
+    grid-template-columns: 48% 48%;
+    grid-column-gap: 4%;
+}
+
+.thumnailBox {
+    display: block;
+    width: 100%;
+    height: 48vw;
+    position: relative;
+    margin-bottom: 4vw;
+}
+
+#bookImg {
+    width: 100%;
+    height: 48vw;
+    object-fit: cover;
+    object-position: center center;
+}
+
+#bookTitle {
+    position: absolute;
+    top: 0;
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: rgba(4, 0, 0, 0.5);
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 48vw;
+    transition-duration: 0.3s;
+}
+
+#bookTitle:hover {
+    opacity: 1;
+    transition-duration: 0.3s;
+}
