@@ -1,10 +1,9 @@
 #contentList {
     width: 100%;
-    margin-top: calc(80px + 10%);
-    margin: calc(80px + 10%) auto 80px;
+    margin: calc(80px + 6%) auto 80px;
     display: grid;
-    grid-template-columns: 48% 48%;
-    grid-column-gap: 4%;
+    grid-template-columns: 47% 47%;
+    grid-column-gap: 6%;
 }
 
 .thumnailBox {
@@ -12,7 +11,7 @@
     width: 100%;
     height: 48vw;
     position: relative;
-    margin-bottom: 4vw;
+    margin-bottom: 6vw;
 }
 
 #bookImg {
@@ -41,4 +40,27 @@
 #bookTitle:hover {
     opacity: 1;
     transition-duration: 0.3s;
+}
+
+@media screen and (min-width:1025px) {
+    #contentList {
+        width: 80%;
+        margin-top: calc(90px + 10%);
+        margin: calc(90px + 10%) auto 80px;
+        grid-template-columns: 30% 30% 30%;
+        grid-column-gap: 5%;
+    }
+
+    .thumnailBox {
+        height: 24vw;
+        margin-bottom: 5vw;
+    }
+
+    #bookImg {
+        height: 24vw;
+    }
+
+    #bookTitle {
+        line-height: 24vw;
+    }
 }
