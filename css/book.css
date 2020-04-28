@@ -24,9 +24,9 @@
 }
 
 #contentImg {
-    height: 75vh;
+    height: 60vh;
     width: 80%;
-    margin: 0 auto 8%;
+    margin: 0 auto 0.4%;
 }
 
 #content {
@@ -44,7 +44,7 @@
     0% {
         opacity: 1;
     }
-  
+
     50% {
         opacity: 0;
     }
