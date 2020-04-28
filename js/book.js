@@ -68,13 +68,19 @@ function GetPhotoNumber() {
 }
 
 function view(data, i) {
+  contentImg.insertAdjacentHTML('beforeend','<img id="content" src=../data/lookbook/' + data + '/lookbook1.jpg />');
   for (var i = 0; i < photoNum; i++) {
     var imgNum = i + 1;
     contentList.insertAdjacentHTML('beforeend','<img id="bookImg" src=../data/lookbook/' + data + '/lookbook' + imgNum + '.jpg onclick=changeImg("' + data + '","' + imgNum + '") />');
   }
-  contentImg.insertAdjacentHTML('beforeend','<img id="content" src=../data/lookbook/' + data + '/lookbook1.jpg />');
 }
 
 function changeImg(data, i){
-    document.getElementById("content").src = "../data/lookbook/" + data + "/lookbook" + i + ".jpg";
+    contentImg.classList.add('fadeOutIn');
+    setTimeout(document.getElementById("content").src = "../data/lookbook/" + data + "/lookbook" + i + ".jpg", 300);
+};
+
+function removefadeOutIn(data, i){
+  contentImg.classList.add('fadeOutIn');
+  setTimeout(document.getElementById("content").src = "../data/lookbook/" + data + "/lookbook" + i + ".jpg", 300);
 };

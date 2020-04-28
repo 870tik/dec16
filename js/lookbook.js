@@ -47,5 +47,5 @@ function removeClass() {
 }
 
 function view(data) {
-    contentList.insertAdjacentHTML('beforeend','<a href="./book.html?' + data.id + '#' + data.photonum + '" class="thumnailBox" target="blank" ><img id="bookImg" src=' + data.thumnail + ' /><p id="bookTitle">' + data.name + '</p></a>');
+    contentList.insertAdjacentHTML('beforeend','<a href="./book.html?' + data.id + '#' + data.photonum + '" class="thumnailBox" target="blank" ><img id="bookImg" src=' + data.thumnail + ' /><div id="bookTitleBox"><p id="bookTitle">' + data.name + '</p></div></a>');
 }
