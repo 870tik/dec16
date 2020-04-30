@@ -48,11 +48,11 @@ function slideshow_timer(){
 }
 
 function removeSplashscreen() {
-    splashScreen.classList.add("animation");
+    $('#splashScreen').addClass('animation');
 }
 
 function addNavAnimation() {
-    nav.classList.add("navAnimation");
+    $('nav').addClass('navAnimation');
 }
 
 function drower() {
@@ -60,14 +60,14 @@ function drower() {
       case 0 :
         menuSp.style.transform = "translateX(0)";
         pos = 100;
-        menuIcon.classList.add('active');
-        body.classList.add('hidden');
+        $('#menuIcon').addClass('active');
+        $('body').addClass('hidden');
         break;
       case 100:
         menuSp.style.transform = "translateX(-205px)";
         pos = 0;
-        menuIcon.classList.remove('active');
-        body.classList.remove('hidden');
+        $('#menuIcon').removeClass('active');
+        $('body').removeClass('hidden');
         break;
     }
   }
