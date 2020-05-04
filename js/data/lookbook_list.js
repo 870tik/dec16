@@ -4,6 +4,6 @@ var lookbook = [
         "thumnail": "../data/lookbook/jessica/lookbook1.jpg",
         "name": "Jessica #stayhome",
         "date": "2020/04",
-        "photonum":3
+        "photonum":6
     }
 ];
