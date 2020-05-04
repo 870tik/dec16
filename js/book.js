@@ -76,11 +76,7 @@ function view(data, i) {
 }
 
 function changeImg(data, i){
-    contentImg.classList.add('fadeOutIn');
-    setTimeout(document.getElementById("content").src = "../data/lookbook/" + data + "/lookbook" + i + ".jpg", 300);
+    // contentImg.classList.add('fadeOutIn');
+    document.getElementById("content").src = "../data/lookbook/" + data + "/lookbook" + i + ".jpg", 300
 };
 
-function removefadeOutIn(data, i){
-  contentImg.classList.add('fadeOutIn');
-  setTimeout(document.getElementById("content").src = "../data/lookbook/" + data + "/lookbook" + i + ".jpg", 300);
-};

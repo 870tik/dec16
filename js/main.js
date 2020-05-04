@@ -3,7 +3,7 @@
 var itemList = document.getElementById("itemList");
 
 const pics_src = ["data/assets/top_img_1.jpg","data/assets/top_img_2.jpg"];
-let num = 1;
+let num = 0;
 
 var splashScreen = document.getElementById("splashScreen");
 var body = document.getElementById("body");
@@ -35,24 +35,35 @@ function view(data) {
   }
 
 function slideshow_timer(){
-    if (num === 2){
+    if (num === 3){
+        document.getElementById("myImg1").style.opacity = 0;
+        document.getElementById("myImg2").style.opacity = 0;
+        document.getElementById("myImg3").style.opacity = 3;
+        num = 0;
+    } else if (num === 2) {
         document.getElementById("myImg1").style.opacity = 1;
         document.getElementById("myImg2").style.opacity = 0;
-        num = 1;
-    } 
-    else {
+        document.getElementById("myImg3").style.opacity = 0;
+        num ++;
+    } else if (num === 1) {
         document.getElementById("myImg1").style.opacity = 0;
         document.getElementById("myImg2").style.opacity = 1;
+        document.getElementById("myImg3").style.opacity = 0;
+        num ++;
+    } else {
+        document.getElementById("myImg1").style.opacity = 1;
+        document.getElementById("myImg2").style.opacity = 0;
+        document.getElementById("myImg3").style.opacity = 0;
         num ++;
     }
 }
 
 function removeSplashscreen() {
-    splashScreen.classList.add("animation");
+    $('#splashScreen').addClass('animation');
 }
 
 function addNavAnimation() {
-    nav.classList.add("navAnimation");
+    $('nav').addClass('navAnimation');
 }
 
 function drower() {
@@ -60,14 +71,14 @@ function drower() {
       case 0 :
         menuSp.style.transform = "translateX(0)";
         pos = 100;
-        menuIcon.classList.add('active');
-        body.classList.add('hidden');
+        $('#menuIcon').addClass('active');
+        $('body').addClass('hidden');
         break;
       case 100:
         menuSp.style.transform = "translateX(-205px)";
         pos = 0;
-        menuIcon.classList.remove('active');
-        body.classList.remove('hidden');
+        $('#menuIcon').removeClass('active');
+        $('body').removeClass('hidden');
         break;
     }
   }
