@@ -126,16 +126,8 @@
 }
 
 @media screen and (max-width:900px) {
-    #top__slider {
-        height: 95vh;
-    }
-    
-    #top__slider img {
-        height: 95vh;
-    }
-
     #item__info {
-        top: calc(95vh - 229px);
+        top: calc(90vh - 229px);
         left: 16px;
         width: inherit;
         flex-direction: column;

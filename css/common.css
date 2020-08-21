@@ -6,6 +6,8 @@ body {
     background-color: #040000;
     letter-spacing: 0.05em;
     line-height: 1.4em;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'Roboto', sans-serif;
   }
 
   button:focus {
@@ -43,6 +45,7 @@ body {
     border: solid 1px #ffffff;
     border-top: none;
     border-right: none;
+    text-decoration: none;
   }
   
   header nav a:hover {
@@ -68,7 +71,7 @@ body {
       }
     
       nav {
-        top: calc(95vh - 43px);
+        top: calc(90vh - 43px);
         width: 100%;
       }
       
@@ -80,6 +83,10 @@ body {
         line-height: 10px;
         border-top: solid 1px white;
         border-bottom: none;
+      }
+
+      nav a:hover {
+        color: white;
       }
     
       nav a:first-child {
