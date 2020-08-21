@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html>
     <head>
         <meta charset="utf-8"/>
@@ -14,6 +13,7 @@
         <meta name="aupor" content="Dec16">
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <title>Dec16</title>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
         <link href="./css/style.css" rel="stylesheet" type="text/css"/>
         <link href="./css/common.css" rel="stylesheet" type="text/css"/>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
@@ -22,63 +22,40 @@
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134866787-4"></script>
         <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-        gtag('config', 'UA-134866787-4');
+            gtag('config', 'UA-134866787-4');
         </script>
     </head>
-    <body id="body" class="noScroll">
-        <div id="splashScreen">
-            <img id="splashLogo" src="./data/assets/splashImg.png" alt="splashImg" />
+    <body>
+        <div id="logo__Dec">
+            <img src="./data/assets/logo_dec_square.svg" />  
         </div>
-        <nav id="nav">
-            <div class="navInner">
-                <div id="menuIcon" onclick="drower()">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <div id="menuSp">
-                    <a href="index.html">HOME</a>
-                    <a href="./html/about.html">ABOUT</a>
-                    <a href="./html/lookbook.html">LOOKBOOK</a>
-                </div>
-                <div class="mainLogo">
-                    <a href="index.html"><img src="./data/assets/logo_dec_b.svg" alt="mainLogo" /></a>
-                </div>
-                <div class="menuRight">
-                    <div id="menuPc">
-                        <a href="index.html">HOME</a>
-                        <a href="./html/about.html">ABOUT</a>
-                        <a href="./html/lookbook.html">LOOKBOOK</a>
-                    </div>
-                    <a class="instaLogo" target="blank" href="https://www.instagram.com/dec16studio/?hl=ja">
-                        <img src="./data/assets/logo_ig_b.png" alt="instagramLogo">
-                    </a>
-                </div>
+        <header>
+            <nav>
+                <a href="https://dec16.official.ec/about">ABOUT</a>
+                <a here="https://dec16.official.ec/">ONLINE SHOP</a>
+            </nav>
+        </header>
+        <div id="top__slider"></div>
+        <div id="item__info">
+            <div class="item__info__textBox">
+                <p class="item__info__textBox-season">2020 AW</p>
+                <p class="item__info__textBox-name">JESSICA</p>
+                <p class="item__info__textBox-price">6,500JPY</p>
             </div>
-        </nav>
-        <div class="mainImg">
-            <img id="myImg1" src="data/assets/top_img_1.jpg" alt="mainImg1">
-            <img id="myImg2" src="data/assets/top_img_2.jpg" alt="mainImg2">
-            <img id="myImg3" src="data/assets/top_img_3.jpg" alt="mainImg3">
+            <img src="./data/products/tshirts/jessica/jessica_black2.png" alt="JESSICA" />
         </div>
-        <div class="itemContainer">
-            <div id="itemList">
-            </div>
-        </div>
-        <footer>
-            <div class="footerInner">
-                <div class="linkList">
-                    <a href="https://dec16.official.ec">ONLINE SHOP</a>
-                </div>
-            </div>
-            <small class="copy">Copyright &copy; 2020 Dec16 All Rights Reserved.</small>
-        </footer>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script type="text/javascript" src="./js/data/reiwa_2_ss.js"></script>
+        <div id="item__slider"></div>
+        <footer>Copyright &copy; 2020 Dec16 All Rights Reserved.</footer>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script type="text/javascript" src="./js/data/top_slider_pc.js"></script>
+        <script type="text/javascript" src="./js/data/top_slider_sp.js"></script>
+        <script type="text/javascript" src="./js/data/item.js"></script>
         <script type="text/javascript" src="./js/main.js"></script>
     </body>
 </html>
