@@ -127,15 +127,15 @@
 
 @media screen and (max-width:900px) {
     #top__slider {
-        height: 80vh;
+        height: 77vh;
     }
     
     #top__slider img{
-        height: 80vh;
+        height: 77vh;
     }
 
     #item__info {
-        top: calc(80vh - 229px);
+        top: calc(77vh - 186px);
         left: 16px;
         width: inherit;
         flex-direction: column;
@@ -178,6 +178,10 @@
     .item img {
         width: calc(100vw / 2.8);
     }
+
+    #item__slider {
+        margin-top: 43px;
+    }
     
     .item__slider__name {
         font-size: 12px;
@@ -194,10 +198,10 @@
     }
     
     .slick-prev {
-        left: -8px;
+        left: -16px;
     }
     
     .slick-next {
-        right: -8px;
+        right: -16px;
     }
 }

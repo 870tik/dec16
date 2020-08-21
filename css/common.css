@@ -68,11 +68,11 @@ body {
           left: 0;
           right: 0;
           margin: auto;
-          width: 80px;
+          width: 64px;
       }
     
       nav {
-        top: calc(80vh - 43px);
+        top: 77vh;
         width: 100%;
       }
       
