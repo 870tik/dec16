@@ -29,8 +29,8 @@ $(document).ready(function(){
     $('#top__slider').slick({
         autoplay: true,
         dots: false,
-        prevArrow: '<button type="button" class="slick-prev">〈</button>',
-        nextArrow: '<button type="button" class="slick-next">〉</button>'
+        prevArrow: '<button type="button" class="slick-prev"><</button>',
+        nextArrow: '<button type="button" class="slick-next">></button>'
     });
     $('#top__slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
         itemInfo.innerHTML = 
