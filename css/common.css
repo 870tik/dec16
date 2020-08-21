@@ -11,18 +11,18 @@ body {
   }
 
   button:focus {
-      outline: 0;
+    outline: 0;
   }
 
   #logo__Dec {
-      z-index: 2;
-      position: absolute;
-      top: 24px;
-      left: 0;
-      right: 0;
-      margin: auto;
-      width: 80px;
-      transition-duration: 0.3s;
+    z-index: 2;
+    position: absolute;
+    top: 24px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 80px;
+    transition-duration: 0.3s;
   }
 
   nav {
@@ -63,16 +63,20 @@ body {
   }
 
   @media screen and (max-width:900px) {
+      body {
+        overflow-x: hidden;
+      }
+
       #logo__Dec {
-          top: 16px;
-          left: 0;
-          right: 0;
-          margin: auto;
-          width: 80px;
+        top: 16px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 64px;
       }
     
       nav {
-        top: calc(80vh - 43px);
+        top: 77vh;
         width: 100%;
       }
       
