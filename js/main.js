@@ -19,7 +19,6 @@ if(window.innerWidth < 900) {
 var deg = 0
 
 $(document).ready(function(){
-    console.log(items)
     for (let i = 0; i < items.length; i++) {
         $('#item__slider').append('<a class="item" href="' + items[i].url + '"><img src=' + items[i].photo + ' /><p class="item__slider__name">' + items[i].name + '</p><p class="item__slider__price">' + items[i].price + '</p></a>');
     }
@@ -29,8 +28,8 @@ $(document).ready(function(){
     $('#top__slider').slick({
         autoplay: true,
         dots: false,
-        prevArrow: '<button type="button" class="slick-prev"><</button>',
-        nextArrow: '<button type="button" class="slick-next">></button>'
+        prevArrow: '<button type="button" class="slick-prev"><img class="slick-arrow-img" src="./data/assets/arrow_left.svg" alt="矢印左" /></button>',
+        nextArrow: '<button type="button" class="slick-next"><img class="slick-arrow-img" src="./data/assets/arrow_right.svg" alt="矢印右" /></button>'
     });
     $('#top__slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
         itemInfo.innerHTML = 
@@ -39,32 +38,3 @@ $(document).ready(function(){
         decLogo.style.transform = "rotate(" + deg + "deg)"
     });
 });
-
-
-function view(data) {
-    if(data.status === 0) {
-        itemList.insertAdjacentHTML('beforeend','<div class="item"><a href=' + data.url + ' class="onSale" target="blank"><img id="itemImg" src=' + data.photo + ' /><p id="itemTitle">' + data.name + '</p><p id="itemPrice">' + data.price + '</p></a></div>');
-    } else if(data.status === 1) {
-        itemList.insertAdjacentHTML('beforeend','<div class="item"><div class="soldout"><img id="itemImg" src=' + data.photo + ' /><p id="itemTitle">' + data.name + '</p><p id="itemPrice">' + data.price + '</p></div><p id="itemStatus" class="red">SOLD OUT</p></div>');
-    } else {
-        itemList.insertAdjacentHTML('beforeend','<div class="item"><div class="commingsoon"><img id="itemImg" src=' + data.photo + ' /><p id="itemTitle">' + data.name + '</p><p id="itemPrice">' + data.price + '</p></div><p id="itemStatus" class="red">SOLD OUT<br>近日入荷予定</p></div>');
-    }
-  }
-
-
-function drower() {
-    switch(pos){
-      case 0 :
-        menuSp.style.transform = "translateX(0)";
-        pos = 100;
-        $('#menuIcon').addClass('active');
-        $('body').addClass('hidden');
-        break;
-      case 100:
-        menuSp.style.transform = "translateX(-205px)";
-        pos = 0;
-        $('#menuIcon').removeClass('active');
-        $('body').removeClass('hidden');
-        break;
-    }
-  }
