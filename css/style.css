@@ -20,12 +20,17 @@
     left: 24px;
     width: 300px;
     padding: 0 24px;
+    text-decoration: none;
     background-color: #040000;
     border: solid 1px #ffffff;
 }
 
 #item__info img {
     width: 160px;
+}
+
+.item__info__textBox .item__label {
+    margin: 16px 0 0 0;
 }
 
 .item__info__textBox-season{
@@ -36,9 +41,8 @@
 }
 
 .item__info__textBox-name{
-    font-size: 12px;
+    font-size: 16px;
     line-height: 12px;
-    font-weight: bold;
     color: #ffffff;
     margin: 4px 0 0;
 }
@@ -76,9 +80,25 @@
     border-left: none;
 }
 
+.item:last-child{
+    border-right: solid 1px white;
+}
+
 .item img {
     width: calc(100vw / 6);
     background-color: rgba(255, 255, 255, 0.08);
+}
+
+.item__label {
+    margin: 1px 4px 0;
+    text-align: right;
+    background-color: #ffffff;
+    color: #040000;
+    font-size: 12px;
+    line-height: 18px;
+    padding: 0px 4px;
+    display: inline-block;
+    vertical-align: top;
 }
 
 .item__slider__name {
@@ -92,8 +112,10 @@
     text-decoration: none;
     color: white;
     font-size: 20px;
+    line-height: 20px;
     font-weight: bold;
     margin: 0;
+    float: left;
 }
 
 #item__slider img:hover {
@@ -149,12 +171,17 @@
         margin: 0 12px;
         order: 2;
     }
+
+    .item__info__textBox .item__label {
+        margin: 0;
+    }
     
     .item__info__textBox-season {
         margin: 0;
     }
     
     .item__info__textBox-name {
+        font-size: 14px;
         margin: 2px 0 0;
     }
     
@@ -172,14 +199,32 @@
 
     .item {
         padding: 16px;
+        position: relative;
     }
     
     .item:first-child {
         padding-left: 16px;
     }
+
+    .item:last-child{
+        border-right: none;
+    }
     
     .item img {
         width: calc(100vw / 2.8);
+    }
+
+    .item__label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+        text-align: center;
+        font-size: 10px;
+        line-height: 14px;
+        padding: 2px 4px;
+        vertical-align: middle;
+
     }
 
     #item__slider {
@@ -194,6 +239,7 @@
     
     .item__slider__price {
         font-size: 16px;
+        float: left;
     }
 
     .slick-arrow {
