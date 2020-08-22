@@ -9,15 +9,15 @@
 var item = [
   {
     "url": "https://dec16.official.ec/items/32936441",
-    "photo": "./data/products/tshirts/jyuroku/jyuroku_black_1.png",
-    "name": "JYUROKU SHIRTS",
+    "photo": "./data/products/tshirts/juroku/juroku_black_1.png",
+    "name": "JUROKU SHIRTS",
     "price": "4,500JPY",
     "status": 0
   },
   { 
     "url": "https://dec16.official.ec/items/28338751",
     "photo": "./data/products/tshirts/jessica/jessica_black2.png",
-    "name": "JESSICA ",
+    "name": "JESSICA SHIRTS",
     "price": "5,500JPY",
     "status": 1
   },
