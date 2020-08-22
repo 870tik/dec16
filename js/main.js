@@ -20,7 +20,11 @@ var deg = 0
 
 $(document).ready(function(){
     for (let i = 0; i < items.length; i++) {
-        $('#item__slider').append('<a class="item" href="' + items[i].url + '"><img src=' + items[i].photo + ' /><p class="item__slider__name">' + items[i].name + '</p><p class="item__slider__price">' + items[i].price + '</p></a>');
+        if(items[i].status === 0) {
+            $('#item__slider').append('<a class="item" href="' + items[i].url + '"><img src=' + items[i].photo + ' /><p class="item__slider__name">' + items[i].name + '</p><p class="item__slider__price">' + items[i].price + '</p></a>');
+        } else {
+            $('#item__slider').append('<div class="item"><img src=' + items[i].photo + ' /><p class="item__slider__name">' + items[i].name + '</p><p class="item__slider__price">' + items[i].price + '</p><p class="item__label">SOLD OUT</p></div>');
+        }
     }
     for (let i = 0; i < data.length; i++) {
         $('#top__slider').append('<img src="' + data[i].top + '" alt="' + data[i].name + '" />');
@@ -32,9 +36,21 @@ $(document).ready(function(){
         nextArrow: '<button type="button" class="slick-next"><img class="slick-arrow-img" src="./data/assets/arrow_right.svg" alt="矢印右" /></button>'
     });
     $('#top__slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
-        itemInfo.innerHTML = 
+        var searchStatus = items.filter(function(item, index){
+            if (item.photo == data[currentSlide].photo) return true;
+          });
+        if(searchStatus[0].status === 0) {
+            itemInfo.href = data[currentSlide].url
+            itemInfo.innerHTML = 
             '<div class="item__info__textBox"><p class="item__info__textBox-season">' + data[currentSlide].season + '</p><p class="item__info__textBox-name">' + data[currentSlide].name + '</p><p class="item__info__textBox-price">' + data[currentSlide].price + '</p></div><img src="' + data[currentSlide].photo + '" alt="' + data[currentSlide].name + '" />'
+        } else {
+            itemInfo.href = "#"
+            itemInfo.innerHTML = 
+            '<div class="item__info__textBox"><p class="item__info__textBox-season">' + data[currentSlide].season + '</p><p class="item__info__textBox-name">' + data[currentSlide].name + '</p><p class="item__info__textBox-price">' + data[currentSlide].price + '</p><p class="item__label">SOLD OUT</p></div><img src="' + data[currentSlide].photo + '" alt="' + data[currentSlide].name + '" />'
+        }
         deg = -180 * -currentSlide
         decLogo.style.transform = "rotate(" + deg + "deg)"
     });
 });
+
+
