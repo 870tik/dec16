@@ -11,7 +11,7 @@ var item = [
     "url": "https://dec16.official.ec/items/32936441",
     "photo": "./data/products/tshirts/juroku/juroku_black_1.png",
     "name": "JUROKU SHIRTS",
-    "price": "4,500JPY",
+    "price": "4,950JPY",
     "status": 0
   },
   { 

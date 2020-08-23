@@ -5,7 +5,7 @@ var top_slider_pc = [
     "photo": "./data/products/tshirts/juroku/juroku_black_1.png",
     "season": "2020 SS",
     "name": "JUROKU",
-    "price": "4,500JPY"
+    "price": "4,950JPY"
   },
   {
     "url": "https://dec16.official.ec/items/32936441",
@@ -13,7 +13,7 @@ var top_slider_pc = [
     "photo": "./data/products/tshirts/juroku/juroku_black_1.png",
     "season": "2020 SS",
     "name": "JUROKU",
-    "price": "4,500JPY"
+    "price": "4,950JPY"
   },
   { 
     "url": "https://dec16.official.ec/items/27985527",
