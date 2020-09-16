@@ -1,4 +1,5 @@
+AuthUserfile /key/.htpasswd
+AuthGroupfile /dev/null
+AuthName "Please enter your ID and password"
 AuthType Basic
-AuthName "Basic Auth"
-AuthUserFile "/key/.htpasswd"
 require valid-user
