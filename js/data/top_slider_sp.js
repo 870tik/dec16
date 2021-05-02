@@ -62,21 +62,5 @@ var top_slider_sp = [
     "season": "2020 SS",
     "name": "JESSICA",
     "price": "5,500JPY"
-  },
-  { 
-    "url": "https://dec16.official.ec/items/27985527",
-    "top": "./data/products/top/sp/jessica/dec5.jpg",
-    "photo": "./data/products/tshirts/jessica/jessica_white2.png",
-    "season": "2020 SS",
-    "name": "JESSICA",
-    "price": "5,500JPY"
-  },
-  {
-    "url": "https://dec16.official.ec/items/27985527",
-    "top": "./data/products/top/sp/jessica/dec6.jpg",
-    "photo": "./data/products/tshirts/jessica/jessica_white2.png",
-    "season": "2020 SS",
-    "name": "JESSICA",
-    "price": "5,500JPY"
   }
 ];
